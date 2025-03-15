@@ -1,0 +1,27 @@
+# Esegui la sequenza di fibonacci
+# Ovvero una serie di numeri interi positivi in cui ogni numero è la somma dei due precedenti
+#0,1,1,2,3,,5,813,21,34
+#prima_iterazione = (a=1,b=1)
+#seconda_iterazione = (a=1,b=2)
+#terza_iterazione = (a=2,b=3)
+#n_iterazione = (a=b,b=a+b)
+
+def n_fibonacci(n):
+    a=1
+    b=1
+    temp=0
+    for v in range(0,n):
+        temp=a
+        a=b
+        b=temp+b
+        
+    return a,b
+        
+        
+numero_richiesto = int(input("Fino a che numero devo calcolare la sequenza di Fibonacci?"))
+a,b = n_fibonacci(numero_richiesto)
+print(f"Gli ultimi due numeri della sequanza di Fibonacci calcolati sono : {a},{b}")
+
+
+
+
