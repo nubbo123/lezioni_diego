@@ -203,4 +203,106 @@ Esempio:
 print("\n=== Slice inverso [::-1] ===")
 parola = "Python"
 print(f"Parola originale: {parola}")
-print(f"Parola invertita: {parola[::-1]}") 
+print(f"Parola invertita: {parola[::-1]}")
+
+
+# =============== Strutture di Controllo: Cicli ===============
+
+# for con range() - Ciclo con contatore
+"""
+Descrizione: Esegue un ciclo per un numero specifico di volte
+Sintassi: for variabile in range(start, stop, step)
+Note: 
+- start: valore iniziale (opzionale, default 0)
+- stop: valore finale (escluso)
+- step: incremento (opzionale, default 1)
+Esempio:
+"""
+print("\n=== for con range() ===")
+print("Contare da 1 a 5:")
+for i in range(1, 6):  # 6 è escluso
+    print(f"Numero: {i}")
+
+print("\nContare di 2 in 2:")
+for i in range(0, 10, 2):  # da 0 a 9 con passo 2
+    print(f"Numero: {i}")
+
+
+# for con lista - Ciclo su elementi
+"""
+Descrizione: Esegue un ciclo su ogni elemento di una sequenza
+Sintassi: for elemento in sequenza
+Esempio:
+"""
+print("\n=== for con lista ===")
+animali = ["gatto", "cane", "coniglio"]
+for animale in animali:
+    print(f"Animale: {animale}")
+
+
+# for con enumerate() - Ciclo con indice
+"""
+Descrizione: Esegue un ciclo su una sequenza fornendo sia l'indice che il valore
+Sintassi: for indice, valore in enumerate(sequenza, start=0)
+Note: start è opzionale e definisce da che numero iniziare a contare
+Esempio:
+"""
+print("\n=== for con enumerate() ===")
+frutta = ["mela", "pera", "banana"]
+print("Lista numerata da 1:")
+for indice, frutto in enumerate(frutta, 1):  # inizia a contare da 1
+    print(f"{indice}. {frutto}")
+
+
+# while - Ciclo con condizione
+"""
+Descrizione: Esegue un ciclo finché una condizione rimane vera
+Sintassi: while condizione:
+Esempio:
+"""
+print("\n=== while ===")
+print("Conto alla rovescia:")
+countdown = 5
+while countdown > 0:
+    print(f"Countdown: {countdown}")
+    countdown -= 1
+print("Via!")
+
+
+# break e continue - Controllo del flusso nei cicli
+"""
+Descrizione: 
+- break: esce immediatamente dal ciclo
+- continue: salta alla prossima iterazione
+Esempio:
+"""
+print("\n=== break e continue ===")
+print("Esempio break:")
+for i in range(1, 6):
+    if i == 4:
+        break
+    print(f"Numero: {i}")
+print("Ciclo interrotto al 4")
+
+print("\nEsempio continue:")
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(f"Numero: {i}")
+print("Il numero 3 è stato saltato")
+
+
+# while True con break - Ciclo infinito controllato
+"""
+Descrizione: Crea un ciclo che continua finché non viene esplicitamente interrotto
+Sintassi: while True:
+Esempio:
+"""
+print("\n=== while True con break ===")
+print("Esempio di input con possibilità di uscita:")
+while True:
+    risposta = input("Scrivi qualcosa (o 'esci' per terminare): ")
+    if risposta.lower() == 'esci':
+        print("Programma terminato")
+        break
+    print(f"Hai scritto: {risposta}") 
