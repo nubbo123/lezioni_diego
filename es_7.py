@@ -11,7 +11,7 @@ import random
 numero_randomico = random.randint(1,10)
 
 for n in range(1,4):
-    tentativo = int(input(f"Indovina il numero,tentativo {n}\n"))
+    tentativo = int(input(f"Indovina il numero,tentativo n{n}\n"))
     if numero_randomico == tentativo:
         print("Hai indovinato")
         break
@@ -20,7 +20,7 @@ for n in range(1,4):
     else :
         print("Il tuo tentativo è minore del numero da indovinare\n")
     if n==3 :
-        print(f"Non hai indovinato, il numero era{numero_randomico}")
+        print(f"Non hai indovinato :(), il numero era{numero_randomico}")
 
     
 
