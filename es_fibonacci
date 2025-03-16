@@ -18,7 +18,7 @@ def n_fibonacci(n):
     return a,b
         
         
-numero_richiesto = int(input("Fino a che numero devo calcolare la sequenza di Fibonacci?"))
+numero_richiesto = int(input("Quante volte devo eseguire la sequenza di Fibonacci?"))
 a,b = n_fibonacci(numero_richiesto)
 print(f"Gli ultimi due numeri della sequanza di Fibonacci calcolati sono : {a},{b}")
 
